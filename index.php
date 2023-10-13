@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genshin Impact Indonesia</title>
-    <link rel="icon" href="paimonicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/paimonicon.png">
+    <link rel="stylesheet" href="./style/style.css">
     
 </head>
 <body>
     <header id="home">
         <nav class="navbar" id="navbar">
             <div>
-                <a href="index.html"><img src="Liyue2.png" alt="logo" class="webicon" id="webicon"></a>
+                <a href="index.html"><img src="./assets/Liyue2.png" alt="logo" class="webicon" id="webicon"></a>
             </div>
             <ul class="menu" id="menu">
                 <li><a class="navitems" href="#home">Home</a></li>
@@ -41,7 +41,7 @@
                         <li><a href="https://genshin.hoyoverse.com/id/gift" target="_blank">Kode Redeem</a></li> -->
                     <!-- </ul> -->
                 </div>
-                <img src="eskrim.png" alt="paimon" style="max-width: 40vw; height: auto; ">
+                <img src="./assets/eskrim.png" alt="paimon" style="max-width: 40vw; height: auto; ">
             </div>
         </section>
     </header>
@@ -49,6 +49,6 @@
         <p>Copyright © Aldi Solihin. All Rights Reserved.</p>
     </footer>
     
-    <script src="javascript.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

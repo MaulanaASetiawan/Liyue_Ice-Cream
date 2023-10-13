@@ -121,7 +121,7 @@ nav ul li a:hover {
     align-items: center;
     /* background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(BGgensin.jpg); */
     /* background-color: var(--konten); */
-    background: url(bg.jpg);
+    background: url(../assets/bg.jpg);
     /* background: linear-gradient(to right, var(--konten) 55%, #F55B7F 45%); */
     height: 120vh;
     padding: 1vh 5vw;
