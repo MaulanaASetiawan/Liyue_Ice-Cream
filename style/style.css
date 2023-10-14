@@ -12,16 +12,15 @@
 body {
     --primary-color: white;
     --text: black;
-    --konten: white;
-    --texth: #f55b7f;
 }
 
-.webicon {
-    width: 10vw;
+.dark {
+    --primary-color: black;
+    --text: white;
 }
 
 .navbar {
-    /* background-color: #F55B7F; */
+    background-color: transparent;
     overflow: hidden;
     width: 100%;
     position: fixed;
@@ -30,7 +29,7 @@ body {
     align-items: center;
     padding: 1vh 3vw;
     top: 0;
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    z-index: 99999;
 }
 
 .navbar ul {
@@ -41,92 +40,91 @@ body {
 
 .navbar ul li a {
     display: block;
-    color: var(--primary-color);
+    color: white;
     text-decoration: none;
     border-top: 2px solid transparent;
-    /* border-radius: 30px; */
     padding: 5% 2vw;
     transition: all 0.35s ease;
     font-size: 90%;
 }
 
 nav ul li a:hover {
-    border-top: 0.2vw solid var(--primary-color);
+    border-top: 0.2vw solid white;
     transform: translateX(2px);
 }
 
-.menumode{
-    display: flex; 
-    align-items: center; 
-    gap: 2vw; 
-    justify-content: center;
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-.menu {
+.darkmode-toggle {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 105px;
 }
 
-#light {
-    fill: white;
-}
-
-.nightmode{
-    position: relative;
-    width: 50px;
-    height: 20px;
-    appearance: none;
-    outline: none;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.nightmode:checked{
-    background-color: #202020;
-}
-
-.nightmode::before{
-    content: '';
+.checkbox {
+    opacity: 0;
     position: absolute;
-    width: 16px;
-    height: 16px;
-    background-color: #F55B7F;
+}
+
+.checkbox-label {
+    background-color: var(--primary-color);
+    width: 70px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    padding: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+}
+
+.fa-moon {color: #FCAEAE;}
+
+.fa-sun {color: #FF8989;}
+
+.checkbox-label .ball {
+    background-color: var(--text);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    right: 4px;
     border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    transition: .5s ease;
+    transition: transform 0.2s ease;
 }
 
-.dark { 
-    /* background-color: white; */
-    --primary-color: black;
-    --text: white;
-    --konten: #404040;
-    --texth:white;
-}
-
-.nightmode:checked::before{
-    transform: translateX(30px);
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(38px);
 }
 
 .isi-1 {
-    color: var(--primary-color);
-    /* height: 94vh; */
+    color: white;
     display: flex;
     align-items: center;
-    /* background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)),url(BGgensin.jpg); */
-    /* background-color: var(--konten); */
-    background: url(../assets/bg.jpg);
-    /* background: linear-gradient(to right, var(--konten) 55%, #F55B7F 45%); */
     height: 120vh;
     padding: 1vh 5vw;
     padding-bottom: 4vh;
     font-size: 95%;
+    transition: 0.5s ease-in-out;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.reverse img {
+    transform: scaleX(-1);
+}
+
+.bg {
+    background: url(../assets/bg.jpg);
+}
+
+.bgdark {
+    background: url(../assets/bgdark.jpg);
 }
 
 .isi-1 img{
@@ -151,17 +149,12 @@ nav ul li a:hover {
     background: #FF4655;
     padding: 1vh 2vw;
     border-radius: 30px;
-    /* border: 1px solid transparent; */
-    /* transition: all 0.55s ease; */
     -webkit-transition: ease-out 0.5s;
     -moz-transition: ease-out 0.1;
     transition: box-shadow 0.5s;
 }
 
 .text a:hover {
-    /* background: transparent; */
-    /* background-color: #0f1923 ; */
-    /* border: 1px solid white; */
     color: black;
     transform: translateX(2px);
     box-shadow: inset 300px 0 0 0 white;
@@ -176,44 +169,16 @@ footer {
 }
 
 @media (orientation: portrait) {
-    .webicon {
-        margin: 0.2vh;
-        width: 10vh;
+    .navbar {
+        background-color: #FF8989;
     }
 
-    .menumode{
-        padding-bottom: 2vh;
-    }
-
-    #menuTutup{
-        display: none;
-    }
-
-    .menu-toggle {
-        justify-content: center;
-        display: block;
-    }
-    
-    .menu {
-        display: none;
-        position: fixed;
-        flex-direction: column;
-        text-align: center;
-        background-color: var(--text);
-        top: 7vh;
-        left: -100%;
-        width: 100%;
-        z-index: 1;
-        transition: 0.5s ease;
-    }
-
-    .menu.active {
-        display: block;
-        left: 0;
+    .navbar ul li a {
+        color: var(--primary-color);
     }
 
     .isi-1 {
-        height: 94vh;
+        height: 100vh;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
