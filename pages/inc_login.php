@@ -12,7 +12,7 @@
         header("location: ../index.php");
     }
     else {
-        echo "Error: " . $query_sql . "<br>" . mysqli_error($conn);
+        // echo "Error: " . $query_sql . "<br>" . mysqli_error($conn);
         echo "<script>
                 alert('Username atau Password salah!');
                 document.location.href='inc_register.php';
