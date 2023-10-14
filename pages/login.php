@@ -46,7 +46,7 @@
 								<div class="card-back">
 									<div class="center-wrap">
 										<div class="section text-center">
-											<h4 class="mb-3 pb-3">register</h4>
+											<h4 class="mb-3 pb-3">Register</h4>
 											<form  action="./inc_register.php" method="POST">
 												<div class="form-group">
 													<input type="text" class="form-style" name="nama" placeholder="Nama Lengkap">
