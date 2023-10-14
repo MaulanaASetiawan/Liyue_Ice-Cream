@@ -5,13 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link rel="stylesheet" href="all.css">
-	<link rel="stylesheet" href="bootstrap.css">
-	<link rel="stylesheet" href="coba.css">
-	<link rel="stylesheet" href="style.css">
-	<!-- <link rel="stylesheet" href="styles.css"> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="../style/login_style_in.css">
 </head>
 <body>
 	<!-- <video id="video-background" autoplay loop muted>
@@ -82,5 +77,6 @@
 		var video = document.getElementById("video-background");
 		video.play();
 	</script> -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
