@@ -41,7 +41,7 @@
                             <span class="ball"></span>
                         </label>
                     </div>
-                    <a class="nav-link " href="#"><button type="button" class="btn btn-outline-light">Login</button></a>
+                    <a class="nav-link " href="./pages/login.php"><button type="button" class="btn btn-outline-light">Login</button></a>
                 </ul>
             </div>
         </div>
