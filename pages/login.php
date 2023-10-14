@@ -29,7 +29,7 @@
 									<div class="center-wrap">
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Log In</h4>
-											<form action="login.php" method="POST">
+											<form action="./inc_login.php" method="POST">
 												<div class="form-group">
 													<input type="email" class="form-style" name="email" placeholder="Email">
 													<i class="input-icon uil uil-at"></i>
@@ -47,7 +47,7 @@
 									<div class="center-wrap">
 										<div class="section text-center">
 											<h4 class="mb-3 pb-3">register</h4>
-											<form  action="register.php" method="POST">
+											<form  action="./inc_register.php" method="POST">
 												<div class="form-group">
 													<input type="text" class="form-style" name="nama" placeholder="Nama Lengkap">
 													<i class="input-icon uil uil-user"></i>
