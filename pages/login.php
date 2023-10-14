@@ -31,7 +31,7 @@
 											<h4 class="mb-4 pb-3">Log In</h4>
 											<form action="./inc_login.php" method="POST">
 												<div class="form-group">
-													<input type="text" class="form-style" name="username" placeholder="Username">
+													<input type="email" class="form-style" name="email" placeholder="Email">
 													<i class="input-icon uil uil-at"></i>
 												</div>
 												<div class="form-group mt-2">
@@ -50,10 +50,6 @@
 											<form  action="./inc_register.php" method="POST">
 												<div class="form-group">
 													<input type="text" class="form-style" name="nama" placeholder="Nama Lengkap">
-													<i class="input-icon uil uil-user"></i>
-												</div>
-												<div class="form-group mt-2">
-													<input type="text" class="form-style" name="username" placeholder="Username">
 													<i class="input-icon uil uil-user"></i>
 												</div>
 												<div class="form-group mt-2">
