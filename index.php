@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    $navText = "Login";
+
+    if(isset($_SESSION['username'])){
+        $navText = $_SESSION['username'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +21,7 @@
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark shadow" id="navbar">
             <div class="container-fluid">
@@ -34,6 +44,37 @@
                             <a class="nav-link active " href="#">Contact</a>
                         <li class="nav-item">
                         </li>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php"><img src="./assets/Liyue2.png" width="150px" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " href="#">Contact</a>
+                    <li class="nav-item"></li>
+                    <?php
+                        if(isset($_SESSION['username'])){
+                            echo "<div><h4>$navText</h4></div>";
+                            echo "<a class='nav-link' href='./pages/inc_logout.php'><button type='button' class='btn btn-outline-light'>Logout</button></a>";
+                        }
+                        else {
+                            echo "<a class='nav-link' href='./pages/login.php'><button type='button' class='btn btn-outline-light'>$navText</button></a>"; 
+                        }
+                        ?>
+
                         <div>
                             <input type="checkbox" class="checkbox" id="checkbox">
                             <label for="checkbox" class="checkbox-label">
@@ -42,9 +83,12 @@
                                 <span class="ball"></span>
                             </label>
                         </div>
+
                         <a class="nav-link " href="#"><button type="button" class="btn btn-outline-light">Login</button></a>
                     </ul>
                 </div>
+
+              
             </div>
         </nav>
     </header>
