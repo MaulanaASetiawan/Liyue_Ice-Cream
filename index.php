@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    $navText = "Login";
+
+    if(isset($_SESSION['username'])){
+        $navText = $_SESSION['username'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,17 +40,24 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active " href="#">Contact</a>
-                    <li class="nav-item">
-                    </li>
-                    <div>
-                        <input type="checkbox" class="checkbox" id="checkbox">
-                        <label for="checkbox" class="checkbox-label">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <span class="ball"></span>
-                        </label>
-                    </div>
-                    <a class="nav-link " href="./pages/login.php"><button type="button" class="btn btn-outline-light">Login</button></a>
+                    <li class="nav-item"></li>
+                    <?php
+                        if(isset($_SESSION['username'])){
+                            echo "<div><h4>$navText</h4></div>";
+                            echo "<a class='nav-link' href='./pages/inc_logout.php'><button type='button' class='btn btn-outline-light'>Logout</button></a>";
+                        }
+                        else {
+                            echo "<a class='nav-link' href='./pages/login.php'><button type='button' class='btn btn-outline-light'>$navText</button></a>"; 
+                        }
+                        ?>
+                        <div>
+                            <input type="checkbox" class="checkbox" id="checkbox">
+                            <label for="checkbox" class="checkbox-label">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                                <span class="ball"></span>
+                            </label>
+                        </div>
                 </ul>
             </div>
         </div>
