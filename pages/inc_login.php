@@ -1,21 +1,17 @@
 <?php
     session_start();
     require "./inc_connect.php";
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $query_sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+    $query_sql = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
     $result = mysqli_query($conn, $query_sql);
 
     if(mysqli_num_rows($result) > 0){
-        $_SESSION['username'] = $username;
+        $_SESSION['email'] = $email;
         header("location: ../index.php");
     }
     else {
         echo "Error: " . $query_sql . "<br>" . mysqli_error($conn);
-        echo "<script>
-                alert('Username atau Password salah!');
-                document.location.href='inc_register.php';
-        </script>";
     }
 ?>
