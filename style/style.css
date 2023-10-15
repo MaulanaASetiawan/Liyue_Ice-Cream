@@ -48,6 +48,12 @@ body {
     align-items: center;
 }
 
+.navbar ul h3{
+    color: white;
+    margin-bottom: 0px;
+    font-weight: 800;
+}
+
 .navbar ul li a {
     display: block;
     color: white;
