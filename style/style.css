@@ -14,6 +14,7 @@ body {
     --text: black;
     --text2:#ffeadd;
     --text3: #FFFF;
+    --card : white;
 }
 
 .dark {
@@ -21,6 +22,7 @@ body {
     --text: white;
     --text2: #C70039;
     --text3: #282828;
+    --card: #C70039;
 }
 
 .navbar {
@@ -207,6 +209,17 @@ nav ul li a:hover {
     color: var(--text);
 }
 
+.card-body{
+    background-color: var(--card);
+    color: var(--text);
+}
+
+.tes{
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+}
+
 .bekgron {
     background-image: url("../assets/about.png") !important; ;
     background-size: cover;
@@ -250,6 +263,31 @@ footer {
 
 }
 
+
+
 /* main {
     background-color: #FBAEAE;
 } */
+
+
+/* tablet */
+
+
+@media screen and (max-width: 768px) {
+    .img-about img {
+        width: 70%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .text-about {
+        background-color: var(--text2);
+        color: var(--text);
+        border-radius: 10px;
+        width: 100%; /* Adjust the width as needed */
+        padding: 10px;
+        margin-top: 10px; /* Add some margin for spacing */
+    }
+}
+
+
