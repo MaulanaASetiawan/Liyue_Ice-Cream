@@ -100,7 +100,7 @@ $(document).ready(function(){
                             <td><?php echo $eskrim["deskripsi"]?></td>
 							<td class="action">
 								<a href="#editEmployeeModal<?php echo $eskrim['id']?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit" name="edit">&#xE254;</i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" name="delete" >&#xE872;</i></a>
+								<a href="#deleteEmployeeModal<?php echo $eskrim['id']?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" name="delete" >&#xE872;</i></a>
 								<div id="editEmployeeModal<?php echo $eskrim['id']?>" class="modal fade">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -139,6 +139,26 @@ $(document).ready(function(){
 									</div>
 								</div>
 							</div>
+							<div id="deleteEmployeeModal<?php echo $eskrim['id']?>" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form action="./inc_delete.php?id=<?php echo $eskrim['id']?>" method="POST">
+				<div class="modal-header">						
+					<h4 class="modal-title">Hapus Data Produk</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">					
+					<p>Apakah Anda yakin ingin menghapus data ini??</p>
+					<p class="text-warning" style="color: crimson !important;"><small>Tindakan ini tidak dapat dibatalkan.</small></p>
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Batalkan">
+					<input type="submit" class="btn btn-danger" value="Hapus">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 							</td>
 						</td>
 					</tr>
@@ -228,10 +248,10 @@ $(document).ready(function(){
 	</div>
 </div> -->
 <!-- Delete Modal HTML -->
-<div id="deleteEmployeeModal" class="modal fade">
+<div id="deleteEmployeeModal?id=<?php echo $eskrim['id']?>" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form>
+			<form action="./inc_delete.php?id=<?php echo $eskrim['id']?>" method="POST">
 				<div class="modal-header">						
 					<h4 class="modal-title">Hapus Data Produk</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
