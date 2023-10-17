@@ -14,7 +14,7 @@ if (isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liyue Ice Cream</title>
-    <link rel="icon" href="./assets/paimonicon.png">
+    <link rel="icon" href="./assets/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,7 +41,7 @@ if (isset($_SESSION['username'])) {
                             <a class="nav-link active" href="#section-about-us">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active " href="#">Contact</a>
+                            <a class="nav-link active " href="#kontak">Contact</a>
                         <li class="nav-item"></li>
                         <?php
                         if (isset($_SESSION['username'])) {
@@ -74,7 +74,9 @@ if (isset($_SESSION['username'])) {
                     <p>
                         Dari Es Krim Klasik yang Memikat Hati Hingga Inovasi Rasa Terkini yang Menggetarkan Lidah. Cicipi Sensasi yang Luar Biasa, Temukan Setiap Gigitan Penuh Kebahagiaan.
                     </p>
+                    <a href="#katalog">
                     <button class="btn btn-outline-danger mt-3">Lihat Menu Selengkapnya...</button>
+                    </a>
                 </div>
                 <img src="./assets/eskrim.png" alt="paimon" style="max-width: 40vw; height: auto; ">
             </div>
@@ -92,24 +94,24 @@ if (isset($_SESSION['username'])) {
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://mockuptree.com/wp-content/uploads/edd/2022/07/Free-ice-cream-mockup-960x640.jpg" class="d-block" alt="...">
+                        <img src="./assets/eskrim2.png" class="d-block" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <button type="button" class="btn btn-danger btn-lg">Dapatkan Sekarang !</button>
                             <h2>Dapatkan kode promo khusus pendaftaran pertama !</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://img.freepik.com/premium-psd/3-oz-paper-ice-cream-cups-mockup_1332-1517.jpg" class="d-block" alt="...">
+                        <img src="./assets/eskrim3.png" class="d-block" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <button type="button" class="btn btn-danger btn-lg">Dapatkan Sekarang !</button>
+                            <h2>Dapatkan kode promo khusus pendaftaran pertama !</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://houseofmockups.com/cdn/shop/products/HOM-000-007D-Ice-Cream-Cone-Wrapper_860x.jpg?v=1606780495" class="d-block" alt="...">
+                        <img src="./assets/eskrim4.png" class="d-block" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <button type="button" class="btn btn-danger btn-lg">Dapatkan Sekarang !</button>
+                            <h2>Dapatkan kode promo khusus pendaftaran pertama !</h2>
                         </div>
                     </div>
                 </div>
@@ -191,8 +193,30 @@ if (isset($_SESSION['username'])) {
                     </div>
                 </div>
             </div>
+            <div class="box2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+           
         </section>
+
+
         <!-- end catalog -->
+
 
         <!-- about us -->
         <section class="p-0" id="section-about-us">
@@ -201,7 +225,8 @@ if (isset($_SESSION['username'])) {
                 <div class="container">
                     <div class="container-fluid row p-2 justify-content-between container-inverse">
                         <div class="col-md-7 col-sm-12  text-about " style="border-radius: 10px 0 0 10px;">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nisi corporis dignissimos inventore maxime nihil fugiat unde eos asperiores! Quidem, fugit porro obcaecati recusandae commodi magni nihil optio dolores sint?
+                        Eskrim Liyue adalah sebuah makanan penutup yang khas dari Liyue, sebuah wilayah di dalam dunia fantasi dalam permainan video Genshin Impact. Liyue 
+                        adalah salah satu dari dua wilayah utama dalam permainan ini, dan memang terkenal dengan kekayaan budayanya yang unik. Eskrim Liyue adalah salah satu contoh penting dari kuliner Liyue yang memikat para pemain dan penggemar permainan.
                         </div>
                         <div class="col-md-5 col-sm-12 img-about p-0 d-flex justify-content-center">
                             <img src="https://akcdn.detik.net.id/visual/2022/06/16/ilustrasi-es-krim-stroberi-1_169.jpeg?w=650" style="border-radius: 0 10px 10px 0;" alt="">
@@ -212,12 +237,14 @@ if (isset($_SESSION['username'])) {
                             <img src="https://mesineskrim.co/wp-content/uploads/2022/01/5ee243469e9be-1.jpg?" style="border-radius: 10px 0 0 10px;" alt="">
                         </div>
                         <div class="col-md-7 col-sm-12 text-about" style="border-radius: 0 10px 10px 0;">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nisi corporis dignissimos inventore maxime nihil fugiat unde eos asperiores! Quidem, fugit porro obcaecati recusandae commodi magni nihil optio dolores sint?
+                        Eskrim Liyue memiliki ciri khas tersendiri yang membuatnya istimewa. Rasa dasarnya adalah campuran manis dan gurih yang membuatnya sangat menggugah selera. Tekstur eskrim ini juga begitu lembut dan halus, memberikan pengalaman kuliner yang unik. Untuk menambah sentuhan eksotis, Eskrim Liyue sering disajikan dengan bahan-bahan alami 
+                        seperti buah-buahan yang hanya dapat ditemukan di dalam dunia Liyue, memberikan sensasi luar biasa kepada para penikmatnya.
                         </div>
                     </div>
                     <div class="container-fluid row p-2 justify-content-between container-inverse">
                         <div class="col-md-7 col-sm-12 text-about" style="border-radius: 10px 0 0 10px;">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nisi corporis dignissimos inventore maxime nihil fugiat unde eos asperiores! Quidem, fugit porro obcaecati recusandae commodi magni nihil optio dolores sint?
+                        Eskrim Liyue juga memiliki tampilan yang cantik, dengan warna dan dekorasi yang mencerminkan budaya dan seni rupa Liyue yang kaya. Ini tidak hanya menciptakan sensasi makanan yang memanjakan lidah, tetapi juga 
+                        sebuah pengalaman visual yang mengagumkan. Bagi para pemain Genshin Impact, menyantap Eskrim Liyue bukan hanya tentang mencicipi rasa, tetapi juga merasakan kedalaman budaya dalam permainan.
                         </div>
                         <div class="col-md-5 col-sm-12 img-about p-0 d-flex justify-content-center">
                             <img src="./assets/es.jpeg.jpg" style="border-radius: 0 10px 10px 0;" alt="">
@@ -228,8 +255,9 @@ if (isset($_SESSION['username'])) {
                             <img src="https://redaksi.inibaru.id/nuploads/6/Otit/es%20krim%20%281%29.jpg" style="border-radius: 10px 0 0 10px;" alt="">
                         </div>
                         <div class="col-md-7 col-sm-12 text-about" style="border-radius: 0 10px 10px 0;">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nisi corporis dignissimos inventore maxime nihil fugiat unde eos asperiores! Quidem, fugit porro obcaecati recusandae commodi magni nihil optio dolores sint?
-                        </div>
+                        Makanan penutup ini juga sering dihubungkan dengan karakter-karakter dan cerita dalam permainan, menjadikannya salah satu elemen yang sangat dicintai oleh para penggemar Genshin Impact. Dalam permainan, pemain sering diberikan 
+                        tugas untuk mencari bahan-bahan khusus atau menyajikan Eskrim Liyue kepada karakter-karakter dalam cerita, menciptakan hubungan yang erat antara makanan ini dan pengalaman bermain. 
+                       </div>
                     </div>
                 </div>
             </div>
@@ -238,13 +266,13 @@ if (isset($_SESSION['username'])) {
 
 
     </main>
-
+    <section id="kontak">
     <footer class="footer">
-        <div class="container py-4">
+        <div class="container py-3">
             <div class="row">
                 <div class="col-md-6">
                     <h5 class="mb-4">Kontak Kami</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> Alamat, Kota, Negara</p>
+                    <p><i class="fas fa-map-marker-alt"></i> jL Perjuangan 6 ,The Kost, Indonesia</p>
                     <p><i class="fas fa-phone"></i> +123456789</p>
                     <p><i class="fas fa-envelope"></i> Liyue_ice_cream@gmail.com</p>
                 </div>
@@ -255,12 +283,12 @@ if (isset($_SESSION['username'])) {
                     <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-        </div>
+            </div>
         <div class=" footer-end text-center p-3" style="background-color: var(--text2);">
             <p>Copyright © Liyue Ice Cream. All Rights Reserved.</p>
         </div>
     </footer>
-
+   </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./script/main.js"></script>
 </body>

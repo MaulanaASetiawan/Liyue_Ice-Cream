@@ -15,6 +15,7 @@ body {
     --text2:#ffeadd;
     --text3: #FFFF;
     --card : white;
+   
 }
 
 .dark {
@@ -23,6 +24,7 @@ body {
     --text2: #C70039;
     --text3: #282828;
     --card: #C70039;
+  
 }
 
 .navbar {
@@ -187,6 +189,8 @@ nav ul li a:hover {
     height: 100%;
     align-self: center;
     padding: 10%;
+    text-align: justify;
+    text-justify: inter-word;
 
 }
 
@@ -219,7 +223,7 @@ nav ul li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -251,7 +255,7 @@ nav ul li a:hover {
     text-align: center;
     background-color: var(--text3);
     color: var(--text);
-    padding: 3vh;
+    padding-top: 3vh;
 }
 
 .fab{
@@ -300,6 +304,113 @@ nav ul li a:hover {
 
 
 
+.box2 div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid var(--text2);
+    z-index: 1;
+}
+.box2 div:nth-child(1){
+    top: 12%;
+    left: 42%;
+    animation: mymove 10s linear infinite;    
+}
+.box2 div:nth-child(2){
+    top: 70%;
+    left: 50%;
+    animation: mymove 7s linear infinite;    
+}
+.box2 div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    animation: mymove 9s linear infinite;    
+}
+.box2 div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    animation: mymove 10s linear infinite;    
+}
+.box2 div:nth-child(5){
+    top: 67%;
+    left: 10%;
+    animation: mymove 6s linear infinite;    
+}
+.box2 div:nth-child(6){
+    top: 60%;
+    left: 70%;
+    animation: mymove 12s linear infinite;    
+}
+.box2 div:nth-child(7){
+    top: 32%;
+    left: 80%;
+    animation: mymove 15s linear infinite;    
+}
+.box2 div:nth-child(8){
+    top: 50%;
+    left: 25%;
+    animation: mymove 16s linear infinite;    
+}
+.box2 div:nth-child(9){
+    top: 5%;
+    left: 90%;
+    animation: mymove 6s linear infinite;    
+}
+.box2 div:nth-child(10){
+    top: 25%;
+    left: 20%;
+    animation: mymove 5s linear infinite;    
+}
+.box2 div:nth-child(11){
+    top: 80%;
+    left: 92%;
+    animation: mymove 7s linear infinite;
+}
+
+.box2 div:nth-child(12){
+    top: 20%;
+    left: 50%;
+    animation: mymove 5s linear infinite;
+}
+
+.box2 div:nth-child(13){
+    top: 20%;
+    left: 32%;
+    animation: mymove 3s linear infinite;
+}
+
+.box2 div:nth-child(14){
+    top: 20%;
+    left: 10%;
+    animation: mymove 2s linear infinite;
+}
+
+.box2 div:nth-child(15){
+    top: 20%;
+    left: 62%;
+    animation: mymove 9s linear infinite;
+}
+
+.box2 div:nth-child(16){
+    top: 20%;
+    left: 85%;
+    animation: mymove 8s linear infinite;
+}
+
+
+    
+@keyframes mymove  {
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
 /* main {
     background-color: #FBAEAE;
 } */
@@ -322,6 +433,8 @@ nav ul li a:hover {
         width: 100%; /* Adjust the width as needed */
         padding: 10px;
         margin-top: 0; /* Add some margin for spacing */
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     .container-inverse {
@@ -329,5 +442,3 @@ nav ul li a:hover {
 
     }
 }
-
-
