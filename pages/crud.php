@@ -10,13 +10,12 @@
 	}
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<title>Database</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -145,6 +144,7 @@ $(document).ready(function(){
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Batalkan">
+					<input type="submit" class="btn btn-info" style="background-color: #77DD77 !important;" value="Simpan" name="simpan">
 				</div>
 			</form>
 		</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){
 <div id="editEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form action="./inc_update.php" method="POST">
+			<form action="./inc_update.php" method="post">
 				<div class="modal-header">						
 					<h4 class="modal-title">Edit Data Produk</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -162,23 +162,23 @@ $(document).ready(function(){
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>Name Produk</label>
-						<input type="text" class="form-control" name="edit_nama" required>
+						<input type="text" class="form-control" name="nama_product" required>
 					</div>
 					<div class="form-group">
 						<label>Harga</label>
-						<input type="text" class="form-control" name="edit_harga" required>
+						<input type="text" class="form-control" name="harga_product" required>
 					</div>
                     <div class="form-group">
                         <label>Varian</label>
-                        <input type="text" class="form-control" name="edit_varian" required>
+                        <input type="text" class="form-control" name="varian_product" required>
                     </div>					
                     <div class="form-group">
                         <label>Stok</label>
-                        <input type="number" class="form-control" name="edit_stok" required>
+                        <input type="number" class="form-control" name="stok_product" required>
                     </div>					
 					<div class="form-group">
 						<label>Deskripsi</label>
-						<textarea class="form-control" name="edit_desc" required></textarea>
+						<textarea class="form-control" name="desc_product" required></textarea>
 					</div>
 				</div>
 				<div class="modal-footer">
