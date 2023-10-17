@@ -154,7 +154,7 @@ $(document).ready(function(){
 <div id="editEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form action="./inc_update.php" method="post">
+			<form action="./inc_update.php?id=<?php echo $eskrim['id']?>" method="post">
 				<div class="modal-header">						
 					<h4 class="modal-title">Edit Data Produk</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
