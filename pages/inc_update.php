@@ -16,7 +16,8 @@
         $stok = $_POST['stok_product'];
         $desc = $_POST['desc_product'];
 
-        $result = mysqli_query($conn, "UPDATE data_eskrim SET nama='$nama', harga='$harga', varian='$varian', stok='$stok' WHERE id = $id");
+        $result = mysqli_query($conn, "UPDATE data_eskrim SET nama='$nama', harga='$harga', varian='$varian', 
+                                        stok='$stok', deskripsi='$desc' WHERE id = $id");
 
         if ($result) {
             echo "
