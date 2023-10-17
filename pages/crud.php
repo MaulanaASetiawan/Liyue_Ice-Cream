@@ -1,3 +1,16 @@
+<?php
+	session_start();
+	require "./inc_connect.php";
+	$result = mysqli_query($conn, "SELECT * FROM data_eskrim");
+
+	$data_eskrim = [];
+
+	while ($row = mysqli_fetch_assoc($result)) {
+		$data_eskrim[] = $row;
+	}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,51 +86,37 @@ $(document).ready(function(){
 					</tr>
 				</thead>
 				<tbody>
+					<?php $i = 1; foreach($data_eskrim as $eskrim) :?>
 					<tr>
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
 							</span>
-						</td>
-						<td>Thomas Hardy</td>
-						<td>thomashardy@mail.com</td>
-						<td>89 Chiaroscuro Rd, Portland, USA</td>
-						<td>(171) 555-2222</td>
-						<td>Orangnya jelek</td>
-						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span class="custom-checkbox">
-								<input type="checkbox" id="checkbox2" name="options[]" value="1">
-								<label for="checkbox2"></label>
-							</span>
-						</td>
-						<td>Dominique Perrier</td>
-						<td>dominiqueperrier@mail.com</td>
-						<td>Obere Str. 57, Berlin, Germany</td>
-						<td>(313) 555-5735</td>
-						<td>Mirip fandi</td>
-						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+						
+                            <td><?php echo $eskrim["nama"]?></td>
+                            <td><?php echo $eskrim["harga"]?></td>
+                            <td><?php echo $eskrim["varian"]?></td>
+                            <td><?php echo $eskrim["stok"]?></td>
+                            <td><?php echo $eskrim["deskripsi"]?></td>
+							<td class="action">
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit" name="edit">&#xE254;</i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete" name="delete" >&#xE872;</i></a>
+							</td>
 						</td>
 					</tr>
+					<?php $i++; endforeach;?>
 				</tbody>
 			</table>
 		</div>
 	</div>        
 </div>
 
-<!-- Edit Modal HTML -->
+<!-- Tambah Modal HTML -->
 <div id="addEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form>
+			<form action="./inc_create.php" method="POST">
 				<div class="modal-header">						
 					<h4 class="modal-title">Tambah Data Produk</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -125,28 +124,27 @@ $(document).ready(function(){
 				<div class="modal-body">					
                     <div class="form-group">
 						<label>Name Produk</label>
-						<input type="text" class="form-control" required>
+						<input type="text" class="form-control" name="nama_product" required>
 					</div>
 					<div class="form-group">
-						<label>Rasa</label>
-						<input type="text" class="form-control" required>
+						<label>Harga</label>
+						<input type="number" class="form-control" name="harga_product" required>
 					</div>
                     <div class="form-group">
                         <label>Varian</label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" name="varian_product" required>
                     </div>					
                     <div class="form-group">
                         <label>Stok</label>
-                        <input type="number" class="form-control" required>
+                        <input type="number" class="form-control" name="stok_product" required>
                     </div>					
 					<div class="form-group">
 						<label>Deskripsi</label>
-						<textarea class="form-control" required></textarea>
+						<textarea class="form-control" name="desc_product" required></textarea>
 					</div>				
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Batalkan">
-					<input type="submit" class="btn btn-success" style="background-color: #77DD77 !important;" value="Tambah">
 				</div>
 			</form>
 		</div>
@@ -156,7 +154,7 @@ $(document).ready(function(){
 <div id="editEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form>
+			<form action="./inc_update.php" method="POST">
 				<div class="modal-header">						
 					<h4 class="modal-title">Edit Data Produk</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -164,28 +162,28 @@ $(document).ready(function(){
 				<div class="modal-body">					
 					<div class="form-group">
 						<label>Name Produk</label>
-						<input type="text" class="form-control" required>
+						<input type="text" class="form-control" name="edit_nama" required>
 					</div>
 					<div class="form-group">
-						<label>Rasa</label>
-						<input type="text" class="form-control" required>
+						<label>Harga</label>
+						<input type="text" class="form-control" name="edit_harga" required>
 					</div>
                     <div class="form-group">
                         <label>Varian</label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" name="edit_varian" required>
                     </div>					
                     <div class="form-group">
                         <label>Stok</label>
-                        <input type="number" class="form-control" required>
+                        <input type="number" class="form-control" name="edit_stok" required>
                     </div>					
 					<div class="form-group">
 						<label>Deskripsi</label>
-						<textarea class="form-control" required></textarea>
+						<textarea class="form-control" name="edit_desc" required></textarea>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<input type="button" class="btn btn-default" data-dismiss="modal" value="Batalkan">
-					<input type="submit" class="btn btn-info" style="background-color: #77DD77 !important;" value="Simpan">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Batalkan" name="batal">
+					<input type="submit" class="btn btn-info" style="background-color: #77DD77 !important;" value="Simpan" name="simpan">
 				</div>
 			</form>
 		</div>
