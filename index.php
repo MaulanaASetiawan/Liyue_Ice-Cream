@@ -72,8 +72,8 @@ if (isset($_SESSION['username'])) {
                 <div>
                     <h1>Selamat Datang di Surga Rasa Eskrim</h1>
                     <p>
-                    Dari Es Krim Klasik yang Memikat Hati Hingga Inovasi Rasa Terkini yang Menggetarkan Lidah. Cicipi Sensasi yang Luar Biasa, Temukan Setiap Gigitan Penuh Kebahagiaan.
-                   </p>
+                        Dari Es Krim Klasik yang Memikat Hati Hingga Inovasi Rasa Terkini yang Menggetarkan Lidah. Cicipi Sensasi yang Luar Biasa, Temukan Setiap Gigitan Penuh Kebahagiaan.
+                    </p>
                     <button class="btn btn-outline-danger mt-3">Lihat Menu Selengkapnya...</button>
                 </div>
                 <img src="./assets/eskrim.png" alt="paimon" style="max-width: 40vw; height: auto; ">
@@ -84,47 +84,46 @@ if (isset($_SESSION['username'])) {
         <!-- catalog -->
         <section class="pr-0 pl-0 pt-0 pb-5 mt-0" id="katalog">
             <!-- CAROSEL -->
-            <div class="container1">
-                <div id="carouselExampleDark" class="carousel carousel-light slide pb-0" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="https://mockuptree.com/wp-content/uploads/edd/2022/07/Free-ice-cream-mockup-960x640.jpg" class="d-block w-100 " alt="...">
-                            <div class="tes carousel-caption d-none d-md-block">
-                                <h5>Favorite Menu #1</h5>
-                                <p>Twisted Ice Cream.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://img.freepik.com/premium-psd/3-oz-paper-ice-cream-cups-mockup_1332-1517.jpg" class="d-block w-100" alt="...">
-                            <div class="tes carousel-caption d-none d-md-block">
-                                <h5>Favorite Menu #2</h5>
-                                <p>Banana Ice Cream.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://houseofmockups.com/cdn/shop/products/HOM-000-007D-Ice-Cream-Cone-Wrapper_860x.jpg?v=1606780495" class="d-block w-100" alt="...">
-                            <div class="tes carousel-caption d-none d-md-block">
-                                <h5>Favorite Menu #3</h5>
-                                <p>Vanilla Crunchy Ice Cream Cone.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://mockuptree.com/wp-content/uploads/edd/2022/07/Free-ice-cream-mockup-960x640.jpg" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <button type="button" class="btn btn-danger btn-lg">Dapatkan Sekarang !</button>
+                            <h2>Dapatkan kode promo khusus pendaftaran pertama !</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://img.freepik.com/premium-psd/3-oz-paper-ice-cream-cups-mockup_1332-1517.jpg" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://houseofmockups.com/cdn/shop/products/HOM-000-007D-Ice-Cream-Cone-Wrapper_860x.jpg?v=1606780495" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-                    <!-- END CAROSEL -->
+
+            <!-- END CAROSEL -->
             <div class="katalog container-fluid p-4">
                 <div class="container">
                     <h1 class="p-5 pb-4" style="text-align: center; font-weight:800;">Catalog</h1>
@@ -203,8 +202,8 @@ if (isset($_SESSION['username'])) {
             <div class="container-fluid bekgron pt-4 pb-5" id="bekgron">
                 <h1 class="text-center mt-5 p-5 text-light" style="font-weight: 800;">ABOUT US</h1>
                 <div class="container">
-                    <div class="container-fluid row p-2 justify-content-between">
-                        <div class="col-md-7 col-sm-12  text-about" style="border-radius: 10px 0 0 10px;">
+                    <div class="container-fluid row p-2 justify-content-between container-inverse">
+                        <div class="col-md-7 col-sm-12  text-about " style="border-radius: 10px 0 0 10px;">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nisi corporis dignissimos inventore maxime nihil fugiat unde eos asperiores! Quidem, fugit porro obcaecati recusandae commodi magni nihil optio dolores sint?
                         </div>
                         <div class="col-md-5 col-sm-12 img-about p-0 d-flex justify-content-center">
@@ -219,7 +218,7 @@ if (isset($_SESSION['username'])) {
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nisi corporis dignissimos inventore maxime nihil fugiat unde eos asperiores! Quidem, fugit porro obcaecati recusandae commodi magni nihil optio dolores sint?
                         </div>
                     </div>
-                    <div class="container-fluid row p-2 justify-content-between">
+                    <div class="container-fluid row p-2 justify-content-between container-inverse">
                         <div class="col-md-7 col-sm-12 text-about" style="border-radius: 10px 0 0 10px;">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nisi corporis dignissimos inventore maxime nihil fugiat unde eos asperiores! Quidem, fugit porro obcaecati recusandae commodi magni nihil optio dolores sint?
                         </div>
@@ -242,31 +241,32 @@ if (isset($_SESSION['username'])) {
 
 
     </main>
-    
+
     <footer class="footer">
-    <div class="container py-4">
-        <div class="row">
-            <div class="col-md-6">
-                <h5 class="mb-4">Kontak Kami</h5>
-                <p><i class="fas fa-map-marker-alt"></i> Alamat, Kota, Negara</p>
-                <p><i class="fas fa-phone"></i> +123456789</p>
-                <p><i class="fas fa-envelope"></i> Liyue_ice_cream@gmail.com</p>
-            </div>
-            <div class="col-md-6">
-                <h5 class="icon mb-4">Ikuti Kami</h5>
-                <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-4">Kontak Kami</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Alamat, Kota, Negara</p>
+                    <p><i class="fas fa-phone"></i> +123456789</p>
+                    <p><i class="fas fa-envelope"></i> Liyue_ice_cream@gmail.com</p>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="icon mb-4">Ikuti Kami</h5>
+                    <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class=" footer-end text-center p-3" style="background-color: var(--text2);">
-    <p>Copyright © Liyue Ice Cream. All Rights Reserved.</p>
-    </div>
-</footer>
+        <div class=" footer-end text-center p-3" style="background-color: var(--text2);">
+            <p>Copyright © Liyue Ice Cream. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./script/main.js"></script>
 </body>
 
 </html>
+<div class=""></div>
