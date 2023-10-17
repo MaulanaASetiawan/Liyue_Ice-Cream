@@ -88,7 +88,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 						foreach ($data_eskrim as $eskrim) : ?>
 							<tr>
 								<td>
-									<span class="custom-checkbox">
+									<span class="custom-checkbox" id="checked">
 										<input type="checkbox" id="checkbox1" name="options[]" value="1">
 										<label for="checkbox1"></label>
 									</span>
