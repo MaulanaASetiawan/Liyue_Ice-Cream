@@ -4,6 +4,7 @@
 	<title>Registrasi</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="../assets/icon.png" >
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="../style/login_style_in.css">
@@ -14,7 +15,7 @@
 			<div class="row full-height justify-content-center">
 				<div class="col-10 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
-						<h6 class="mb-0 pb-3"><span>Log In </span><span>Register</span></h6>
+						<div class="d-flex justify-content-center mb-3"><h6 class="mb-0 p-2"><span>Log In </span><span>Register</span></h6></div>
 						<input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
 						<label for="reg-log"></label>
 						<div class="card-3d-wrap mx-auto">
@@ -65,8 +66,8 @@
 								</div>
 							</div>
 						</div>
-						
 					</div>
+					<a href="../index.php"><button class="btn" id="btn-kembali">Kembali</button></a>
 				</div>
 			</div>
 		</div>

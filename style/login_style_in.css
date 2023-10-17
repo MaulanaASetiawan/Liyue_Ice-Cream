@@ -25,10 +25,20 @@ body {
     font-weight: 600;
   }
   
+  h6 {
+    background-color: #ffeadd;
+    width: fit-content;
+    border-radius: 3px;
+  }
+
   h6 span {
-    color: #ffeadd;
+    /* background-color: #ffeadd; */
+    color: #fcaeae;
     padding: 0 20px;
     font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    /* margin: 1%; */
   }
   
   .section {
@@ -92,7 +102,7 @@ body {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     perspective: 800px;
-    margin-top: 60px;
+    margin-top: 40px;
   }
   
   .card-3d-wrapper {
@@ -109,7 +119,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: #ffeadd;
-    background-image: url('c:\Users\LENOVO\Downloads\2\Gif-Background-1920x1080-4k-Elizabethporterdesigns.com.gif');
     position: absolute;
     border-radius: 6px;
     -webkit-transform-style: preserve-3d;
@@ -152,7 +161,7 @@ body {
     line-height: 22px;
     letter-spacing: 0.5px;
     outline: none;
-    color: #c4c3ca;
+    color: #000080;
     background-color: #ffffff;
     border: none;
     -webkit-transition: all 200ms linear;
@@ -198,6 +207,15 @@ body {
   }
   
   .btn:hover {
+    background-color: #000000;
+    color: #ffeba7;
+    box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+  }
+
+  #btn-kembali {
+    background-color: #ffeadd;
+  }
+  #btn-kembali:hover {
     background-color: #000000;
     color: #ffeba7;
     box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);

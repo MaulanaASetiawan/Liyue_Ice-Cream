@@ -16,6 +16,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Database</title>
+	<link rel="icon" href="../assets/icon.png" >
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -62,7 +63,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 						</div>
 						<div class="col-sm-6 align-self-center">
 							<a href="#addEmployeeModal" class="btn btn-success btn-color-suc" style="background-color: #77DD77 !important;" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Produk</span></a>
-							<a href="#deleteEmployeeModal" class="btn btn-danger btn-color-dan" style="background-color: #FF6962 !important;" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
 						</div>
 					</div>
 				</div>
@@ -70,9 +70,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 					<thead>
 						<tr>
 							<th>
-								<span class="custom-checkbox">
-									<input type="checkbox" id="selectAll">
-									<label for="selectAll"></label>
+								<span>
 								</span>
 							</th>
 							<th>Nama Produk </th>
@@ -89,8 +87,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 							<tr>
 								<td>
 									<span class="custom-checkbox" id="checked">
-										<input type="checkbox" id="checkbox1" name="options[]" value="1">
-										<label for="checkbox1"></label>
 									</span>
 
 								<td><?php echo $eskrim["nama"] ?></td>
@@ -165,6 +161,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 						<?php $i++;endforeach; ?>
 					</tbody>
 				</table>
+				<!-- <div> -->
+				<a href="../index.php"><button id="btn-kembali">Kembali</button></a>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
