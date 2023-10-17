@@ -1,7 +1,7 @@
 <?php
     require "./inc_connect.php";
-    $id = isset($_GET['id']) ? $_GET['id'] : null;
-    $get = mysqli_query($conn, "SELECT * FROM data_eskrim WHERE id = '$id'");
+    $id = $_GET['id'];
+    $get = mysqli_query($conn, "SELECT * FROM data_eskrim WHERE id = $id");
     $eskrim = [];
 
     while ($row = mysqli_fetch_assoc($get)) {
@@ -17,7 +17,7 @@
         $desc = $_POST['desc_product'];
 
         $result = mysqli_query($conn, "UPDATE data_eskrim SET nama='$nama', harga='$harga', varian='$varian', 
-        stok='$stok', deskripsi= '$desc' WHERE id = $id");
+                                        stok='$stok', deskripsi='$desc' WHERE id = $id");
 
         if ($result) {
             echo "
@@ -26,6 +26,11 @@
                 document.location.href = 'crud.php';
             </script>";
         } else {
-            echo "Error: " . $result . "<br>" . mysqli_error($conn);
+            echo "
+            <script>
+                alert('Data gagal diubah!');
+                document.location.href = 'crud.php';
+            </script>";
         }
     }
+?>
