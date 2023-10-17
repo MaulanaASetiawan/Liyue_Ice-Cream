@@ -23,7 +23,7 @@
         else {
             echo "<script>
                     alert('Username atau Password salah!');
-                    document.location.href='.php';
+                    document.location.href='login.php';
                  </script>";
         }   
     }

@@ -62,7 +62,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 						</div>
 						<div class="col-sm-6 align-self-center">
 							<a href="#addEmployeeModal" class="btn btn-success btn-color-suc" style="background-color: #77DD77 !important;" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Produk</span></a>
-							<a href="#deleteEmployeeModal" class="btn btn-danger btn-color-dan" style="background-color: #FF6962 !important;" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
 						</div>
 					</div>
 				</div>
@@ -70,10 +69,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 					<thead>
 						<tr>
 							<th>
-								<span class="custom-checkbox">
-									<input type="checkbox" id="selectAll">
-									<label for="selectAll"></label>
-								</span>
+								<span></span>
 							</th>
 							<th>Nama Produk </th>
 							<th>Harga</th>
@@ -88,11 +84,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 						foreach ($data_eskrim as $eskrim) : ?>
 							<tr>
 								<td>
-									<span class="custom-checkbox" id="checked">
-										<input type="checkbox" id="checkbox1" name="options[]" value="1">
-										<label for="checkbox1"></label>
-									</span>
-
+								<span></span>
 								<td><?php echo $eskrim["nama"] ?></td>
 								<td><?php echo $eskrim["harga"] ?></td>
 								<td><?php echo $eskrim["varian"] ?></td>
