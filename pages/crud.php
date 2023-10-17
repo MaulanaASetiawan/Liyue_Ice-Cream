@@ -70,8 +70,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 					<thead>
 						<tr>
 							<th>
-								<span>
-								</span>
+								<span></span>
 							</th>
 							<th>Nama Produk </th>
 							<th>Harga</th>
@@ -86,9 +85,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 						foreach ($data_eskrim as $eskrim) : ?>
 							<tr>
 								<td>
-									<span class="custom-checkbox" id="checked">
-									</span>
-
+								<span></span>
 								<td><?php echo $eskrim["nama"] ?></td>
 								<td><?php echo $eskrim["harga"] ?></td>
 								<td><?php echo $eskrim["varian"] ?></td>

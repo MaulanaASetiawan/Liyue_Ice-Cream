@@ -192,10 +192,7 @@ if (isset($_SESSION['username'])) {
                 </div>
             </div>
         </section>
-
-
         <!-- end catalog -->
-
 
         <!-- about us -->
         <section class="p-0" id="section-about-us">
