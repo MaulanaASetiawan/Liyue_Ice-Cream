@@ -1,9 +1,18 @@
 <?php
+require "./pages/inc_connect.php";
 session_start();
 $navText = "Login";
 
 if (isset($_SESSION['username'])) {
     $navText = $_SESSION['username'];
+}
+
+$result = mysqli_query($conn, "SELECT * FROM data_eskrim");
+
+$data_eskrim = [];
+
+while ($row = mysqli_fetch_assoc($result)) {
+	$data_eskrim[] = $row;
 }
 ?>
 
@@ -45,7 +54,7 @@ if (isset($_SESSION['username'])) {
                         <li class="nav-item"></li>
                         <?php
                         if (isset($_SESSION['username'])) {
-                            echo "<h3>$navText</h3>";
+                            echo "<img src='./assets/pfp.png' id='profile-pict-style' alt=''><h3>$navText</h3>";
                             echo "<a class='nav-link' href='./pages/inc_logout.php'><button type='button' class='btn btn-outline-light'>Logout</button></a>";
                         } else {
                             echo "<a class='nav-link' href='./pages/login.php'><button type='button' class='btn btn-outline-light'>$navText</button></a>";
@@ -128,71 +137,29 @@ if (isset($_SESSION['username'])) {
             <!-- END CAROSEL -->
             <div class="katalog container-fluid p-4">
                 <div class="container">
-                    <h1 class="p-5 pb-4" style="text-align: center; font-weight:800;">Catalog</h1>
-                    <div class="row justify-content-center">
-                        <div class="col-md-4">
-                            <div class="card bg-light">
-                                <img src="assets/bg.jpg" alt="">
-                                <div class="card-body">
-                                    <p class="card-text">Ini Katalog Produk !</p>
-                                    <button type="button" class="btn btn-dark">Beli</button>
+                <h1 class="p-5 pb-4" style="text-align: center; font-weight:800;">Catalog</h1>
+                <div class="row justify-content-center">
+                   . <?php $i = 1; foreach ($data_eskrim as $eskrim) : ?>
+                    <?php
+                        echo"
+                        <div class='col-md-4 mb-2 '>
+                            <div class='card bg-light tess'>
+                                <img src='assets/catalog/{$eskrim['gambar']}'>
+                                <div class='card-body'>
+                                    <p class='card-text'>{$eskrim['nama']}</p>
+                                    <p class='card-text'>{$eskrim['varian']}</p>
+                                    <p class='card-text'>{$eskrim['harga']}</p>
+                                    <p class='card-text'>{$eskrim['deskripsi']}</p>
+                                    <button type='button' class='btn btn-dark'>Beli</button>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-4">
-                            <div class="card bg-light">
-                                <img src="assets/bgdark.jpg" alt="">
-                                <div class="card-body">
-                                    <p class="card-text">Ini Katalog Produk !</p>
-                                    <button type="button" class="btn btn-dark">Beli</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card bg-light">
-                                <img src="assets/bg.jpg" alt="">
-                                <div class="card-body">
-                                    <p class="card-text">Ini Katalog Produk !</p>
-                                    <button type="button" class="btn btn-dark">Beli</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-4 justify-content-center">
-                        <div class="col-md-4">
-                            <div class="card bg-light">
-                                <img src="assets/bg.jpg" alt="">
-                                <div class="card-body">
-                                    <p class="card-text">Ini Katalog Produk !</p>
-                                    <button type="button" class="btn btn-dark">Beli</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card bg-light">
-                                <img src="assets/bgdark.jpg" alt="">
-                                <div class="card-body">
-                                    <p class="card-text">Ini Katalog Produk !</p>
-                                    <button type="button" class="btn btn-dark">Beli</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card bg-light">
-                                <img src="assets/bg.jpg" alt="">
-                                <div class="card-body">
-                                    <p class="card-text">Ini Katalog Produk !</p>
-                                    <button type="button" class="btn btn-dark">Beli</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        ";    
+                        ?>    
+                    <?php $i++;endforeach; ?>
                 </div>
             </div>
+        </div>
             <div class="box2">
             <div></div>
             <div></div>
@@ -211,7 +178,6 @@ if (isset($_SESSION['username'])) {
             <div></div>
             <div></div>
         </div>
-           
         </section>
 
 
@@ -257,7 +223,7 @@ if (isset($_SESSION['username'])) {
                         <div class="col-md-7 col-sm-12 text-about" style="border-radius: 0 10px 10px 0;">
                         Makanan penutup ini juga sering dihubungkan dengan karakter-karakter dan cerita dalam permainan, menjadikannya salah satu elemen yang sangat dicintai oleh para penggemar Genshin Impact. Dalam permainan, pemain sering diberikan 
                         tugas untuk mencari bahan-bahan khusus atau menyajikan Eskrim Liyue kepada karakter-karakter dalam cerita, menciptakan hubungan yang erat antara makanan ini dan pengalaman bermain. 
-                       </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -287,11 +253,10 @@ if (isset($_SESSION['username'])) {
         <div class=" footer-end text-center p-3" style="background-color: var(--text2);">
             <p>Copyright © Liyue Ice Cream. All Rights Reserved.</p>
         </div>
-    </footer>
+    </footer>.
    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./script/main.js"></script>
 </body>
 
 </html>
-<div class=""></div>

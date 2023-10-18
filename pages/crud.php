@@ -97,7 +97,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 									<div id="editEmployeeModal<?php echo $eskrim['id'] ?>" class="modal fade">
 										<div class="modal-dialog">
 											<div class="modal-content">
-												<form action="./inc_update.php?id=<?php echo $eskrim['id'] ?>" method="post">
+												<form action="./inc_update.php?id=<?php echo $eskrim['id'] ?>" method="post" enctype="multipart/form-data">
 													<div class="modal-header">
 														<h4 class="modal-title">Edit Data Produk</h4>
 														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -105,19 +105,19 @@ while ($row = mysqli_fetch_assoc($result)) {
 													<div class="modal-body">
 														<div class="form-group">
 															<label>Name Produk</label>
-															<input type="text" class="form-control" name="nama_product" required>
+															<input type="text" class="form-control" name="nama_product" value="<?php echo $eskrim['nama'] ?>" required>
 														</div>
 														<div class="form-group">
 															<label>Harga</label>
-															<input type="text" class="form-control" name="harga_product" required>
+															<input type="text" class="form-control" name="harga_product" value="<?php echo $eskrim['harga'] ?>" required>
 														</div>
 														<div class="form-group">
 															<label>Varian</label>
-															<input type="text" class="form-control" name="varian_product" required>
+															<input type="text" class="form-control" name="varian_product" value="<?php echo $eskrim['varian'] ?>" required>
 														</div>
 														<div class="form-group">
 															<label>Stok</label>
-															<input type="number" class="form-control" name="stok_product" required>
+															<input type="number" class="form-control" name="stok_product" value="<?php echo $eskrim['stok'] ?>" required>
 														</div>
 														<div class="form-group">
 															<label>Deskripsi</label>
@@ -159,17 +159,17 @@ while ($row = mysqli_fetch_assoc($result)) {
 					</tbody>
 				</table>
 				<!-- <div> -->
-				<a href="../index.php"><button id="btn-kembali">Kembali</button></a>
+				<a href="./inc_logout.php"><button id="btn-kembali">Logout</button></a>
 				<!-- </div> -->
 			</div>
 		</div>
 	</div>
 
-	<!-- Tambah Modal HTML -->
+	<!-- . Modal HTML -->
 	<div id="addEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="./inc_create.php" method="POST">
+				<form action="./inc_create.php" method="POST" enctype="multipart/form-data">
 					<div class="modal-header">
 						<h4 class="modal-title">Tambah Data Produk</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -181,7 +181,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 						</div>
 						<div class="form-group">
 							<label>Harga</label>
-							<input type="number" class="form-control" name="harga_product" required>
+							<input type="text" class="form-control" name="harga_product" required>
 						</div>
 						<div class="form-group">
 							<label>Varian</label>
@@ -190,6 +190,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 						<div class="form-group">
 							<label>Stok</label>
 							<input type="number" class="form-control" name="stok_product" required>
+						</div>
+						<div class="form-group">
+							<label>Gambar</label>
+							<input type="file" class="form-control" id="gambar" name="gambar_product" required>
 						</div>
 						<div class="form-group">
 							<label>Deskripsi</label>

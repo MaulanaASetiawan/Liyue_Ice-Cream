@@ -73,6 +73,15 @@ nav ul li a:hover {
     transform: translateX(2px);
 }
 
+#profile-pict-style{
+    display: flex;
+    width: 50px;
+    background-color: #FF8989;
+    border-radius: 100px;
+    border: solid #ffeadd;
+    transform: scaleX(-1);
+}
+
 .darkmode-toggle {
     display: flex;
     justify-content: center;
@@ -211,6 +220,11 @@ nav ul li a:hover {
 
 #katalog  h1{
     color: var(--text);
+}
+
+.card img {
+    /* align-self: center; */
+    max-width: 100%;
 }
 
 .carousel-item div{
@@ -441,4 +455,8 @@ nav ul li a:hover {
         flex-direction: column-reverse;
 
     }
+
+    #profile-pict-style{
+        transform: translateX(0px);
+        }
 }
