@@ -142,7 +142,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                    . <?php $i = 1; foreach ($data_eskrim as $eskrim) : ?>
                     <?php
                         echo"
-                        <div class='col-md-4 mb-2 '>
+                        <div class='col-md-4 mb-3 '>
                             <div class='card bg-light tess'>
                                 <img src='assets/catalog/{$eskrim['gambar']}'>
                                 <div class='card-body'>
